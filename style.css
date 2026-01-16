@@ -1,28 +1,40 @@
 * {
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #222;
+  background: #fff;
 }
 
 .hero {
-  padding: 80px 20px;
+  padding: 90px 20px;
   text-align: center;
   background: #f5f7fa;
 }
 
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
 section {
   padding: 60px 20px;
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
 }
 
-h1, h2 {
-  margin-bottom: 16px;
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
 .skills ul {
@@ -31,22 +43,48 @@ h1, h2 {
 }
 
 .skills li {
-  margin-bottom: 8px;
+  padding: 8px 0;
 }
 
 .portfolio {
   display: grid;
-  gap: 20px;
+  gap: 24px;
 }
 
 .card {
   border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 24px;
+  border-radius: 10px;
+  background: #fff;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .4s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.articles p {
+  max-width: 720px;
 }
 
 .contact {
   text-align: center;
   background: #111;
   color: #fff;
+  padding: 40px 20px;
+}
+
+.contact p {
+  margin: 6px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
